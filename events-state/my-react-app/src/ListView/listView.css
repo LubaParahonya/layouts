@@ -1,0 +1,67 @@
+.cards_list{
+  height: 100%;
+  width: 1300px;
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.change_list{
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+
+.card_prod_list {
+  margin-top: 50px;
+  height: 200px;
+  width: 100%;
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+}
+
+.name_product_list{
+  color: black;
+  margin: 100px;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.color_product_list {
+  color: black;
+  margin: 100px;
+  font-size: smaller;
+
+}
+
+.price_product_list{
+  color: red;
+  margin: 100px;
+  font-weight: bolder;
+
+}
+.to_add_list{
+  background-color: white;
+  border: red solid 1px;
+  border-radius: 50px;
+  font-size: medium;
+  color: red;
+  font-weight: bolder;
+  text-transform: uppercase;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  margin-top: 80px;
+  align-items: center;
+  
+  
+
+}
