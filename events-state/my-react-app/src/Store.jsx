@@ -55,25 +55,14 @@ class Store extends Component{
             }],
       checked: false,   
   }
-  this.onSwitch = this.onSwitch.bind(this);
+  
   }
-
-  onSwitch(event) {
-    this.setState({checked: !this.state.checked});
-
-    if (!this.state.checked) {
-      
-    } else {
-      
-    }
-}
-
- 
+  
   render(){
     return (
       <>  
-    <CardsView cards={this.state.products} />
-    <ListView items={this.state.products} />
+    <IconSwitch onSwitch={checked ? <CardsView cards={this.state.products} />:
+    <ListView items={this.state.products} />} /> 
     
       </>
     )

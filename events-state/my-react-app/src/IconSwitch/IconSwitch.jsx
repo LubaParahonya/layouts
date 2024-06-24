@@ -1,15 +1,20 @@
 import React, { Component } from 'react'
 import '../App.css'
 
+
 export class IconSwitch extends Component {
   constructor(props){
     super(props)
+    this.onSwitch = this.onSwitch.bind(this);     
   }
+  onSwitch(event) {
+    this.setState({checked: !this.state.checked});
+}
+ 
   render() {
     return (
-      <>
-        <IconSwitch icon={"view_list"} onSwitch={() => console.log("change state view_list")}/>
-        <IconSwitch icon={"view_module"} onSwitch={() => console.log("change state view_module")}/>
+      <>  
+        <div className="material-icons" icon="view_module" onSwitch={checked? icon="view_module" : icon="view_list" }></div>
       </>
     )
   }
