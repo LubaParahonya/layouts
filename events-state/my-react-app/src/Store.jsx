@@ -11,6 +11,7 @@ import ListView from './ListView/ListView'
 
 
 
+
 class Store extends Component{
   constructor(props){
     super(props)
@@ -53,18 +54,22 @@ class Store extends Component{
               color: "green",
               img: "https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/events-state/layouts/img/5.jpg"
             }],
-      checked: false,   
+      checked : false         
   }
-  
+  this.onSwitch = this.onSwitch.bind(this);
+
+   }
+   onSwitch(){
+    this.setState({checked: !this.state.checked});
   }
+ 
   
   render(){
     return (
       <>  
-    <IconSwitch onSwitch={checked ? <CardsView cards={this.state.products} />:
-    <ListView items={this.state.products} />} /> 
-    
-      </>
+    <IconSwitch onSwitch={this.onSwitch} /> {this.state.checked ? (<CardsView cards={this.state.products} />):(<ListView items={this.state.products} />)
+}  
+    </>
     )
   }
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Store from '../Store'
+import IconSwitch from '../IconSwitch/IconSwitch'
+import { v4 as uuid } from "uuid";
 
 export class CardsView extends Component {
     constructor(props){
@@ -9,9 +11,8 @@ export class CardsView extends Component {
   render() {
     return (
       <div className='cards'>
-        <button className='change'>кнопка</button>
         {this.props.cards.map(el => (
-          <div key={el.id} className='card_prod'><div key={el.id} className='name_product'>{el.name}</div><div key={el.id} className='color_product'>{el.color}</div><div key={el.id} className='price_product'>${el.price}</div><button className='to_add'>Add to cart</button><img className='element_img' src={el.img} key ={el.id}/></div>
+          <div key={uuid()} className='card_prod'><div key={uuid()} className='name_product'>{el.name}</div><div key={uuid()} className='color_product'>{el.color}</div><div key={uuid()} className='price_product'>${el.price}</div><button className='to_add'>Add to cart</button><img className='element_img' src={el.img} key ={uuid()}/></div>
         ))}
       </div>
     )
