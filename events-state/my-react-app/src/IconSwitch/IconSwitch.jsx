@@ -11,7 +11,8 @@ export class IconSwitch extends Component {
   render() {
     return (
       <>  
-     <button className='change' onClick={this.props.onSwitch} >кнопка</button>
+     <button icon={this.props.checked ?'view_module' : 'view_list'} className='change  material-icons' onClick={this.props.onSwitch} >{this.props.checked ?'view_module': 'view_list'}</button>
+
       </>
     )
   }

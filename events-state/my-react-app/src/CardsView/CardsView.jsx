@@ -12,7 +12,7 @@ export class CardsView extends Component {
     return (
       <div className='cards'>
         {this.props.cards.map(el => (
-          <div key={uuid()} className='card_prod'><div key={uuid()} className='name_product'>{el.name}</div><div key={uuid()} className='color_product'>{el.color}</div><div key={uuid()} className='price_product'>${el.price}</div><button className='to_add'>Add to cart</button><img className='element_img' src={el.img} key ={uuid()}/></div>
+          <div key={uuid()} className='card_prod'><div  className='name_product'>{el.name}</div><div  className='color_product'>{el.color}</div><div  className='price_product'>${el.price}</div><button className='to_add'>Add to cart</button><img className='element_img' src={el.img} /></div>
         ))}
       </div>
     )

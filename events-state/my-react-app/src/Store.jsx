@@ -67,7 +67,7 @@ class Store extends Component{
   render(){
     return (
       <>  
-    <IconSwitch onSwitch={this.onSwitch} /> {this.state.checked ? (<CardsView cards={this.state.products} />):(<ListView items={this.state.products} />)
+    <IconSwitch onSwitch={this.onSwitch} checked={this.state.checked} /> {this.state.checked ? (<CardsView cards={this.state.products} />):(<ListView items={this.state.products} />)
 }  
     </>
     )
